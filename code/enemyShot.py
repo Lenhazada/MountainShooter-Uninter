@@ -1,4 +1,4 @@
-from code.const import ENTITY_SPEED, ENTITY_SHOT_DELAY
+from code.const import ENTITY_SPEED
 from code.entity import Entity
 
 

@@ -20,7 +20,7 @@ class Menu:
         menu_option = 0  # start the variable
 
         while True:
-            #DRAW IMAGES
+            # DRAW IMAGES
             self.window.blit(source=self.surf, dest=self.rect)  # put the image from surf to rect
             self.menu_text(60, "Mountain", C_ORANGE, ((WIN_WIDTH / 2), 70))
             self.menu_text(60, "Shooter", C_ORANGE, ((WIN_WIDTH / 2), 120))
@@ -39,17 +39,17 @@ class Menu:
                     pygame.quit()  # Close window
                     quit()  # end pygame
                 if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_DOWN: # down key is pressed
+                    if event.key == pygame.K_DOWN:  # down key is pressed
                         if menu_option < len(MENU_OPTION) - 1:
                             menu_option += 1
                         else:
                             menu_option = 0
-                    if event.key == pygame.K_UP: # up key is pressed
+                    if event.key == pygame.K_UP:  # up key is pressed
                         if menu_option > 0:
                             menu_option -= 1
                         else:
-                            menu_option = len(MENU_OPTION) -1
-                    if event.key == pygame.K_RETURN: # enter is pressed
+                            menu_option = len(MENU_OPTION) - 1
+                    if event.key == pygame.K_RETURN:  # enter is pressed
                         return MENU_OPTION[menu_option]
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
